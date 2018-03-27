@@ -5,6 +5,7 @@ import query
 # Name of the database
 DATABASE_FILE = "news"
 
+
 def connect_to_database():
     """
     - Take name of database
@@ -16,6 +17,7 @@ def connect_to_database():
     c = db.cursor()
     return db, c
     db.close()
+
 
 def get_query(query):
     """
@@ -42,6 +44,7 @@ def print_formatted_query(question, results):
     for msg in results:
         print("    " + str(msg[0]) + " -- " + str(msg[1]) + " views")
     print()
+
 
 def print_formatted_percent_query(question, results):
     """
